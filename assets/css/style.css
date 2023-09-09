@@ -401,15 +401,16 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+/* Add space between rows */
+.about .content .row {
+  margin-bottom: 20px; /* Adjust the value as needed */
 }
 
+/* Add space between columns */
 .about .content ul {
   list-style: none;
   padding: 0;
+  margin-left: 20px; /* Adjust the value as needed */
 }
 
 .about .content ul li {
@@ -432,6 +433,29 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
+/* Style for the download button */
+.download-button {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.download-button .btn {
+  background-color: #0563bb;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button .btn:hover {
+  background-color:green;
+}
+/* Adjust the column containing the image */
+.col-lg-4 {
+  height: 400px;
+}
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -609,14 +633,6 @@ section {
 
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
 }
 
 .portfolio .portfolio-wrap::before {
