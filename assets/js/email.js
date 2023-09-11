@@ -6,7 +6,7 @@
 })();
 
 window.onload = function () {
-    document.getElementById('template_zxax6zb').addEventListener('submit', function (event) {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
         event.preventDefault();
         // Generate a five-digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
