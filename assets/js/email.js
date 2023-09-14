@@ -37,6 +37,11 @@ contactForm.addEventListener("submit", function (e) {
     message: messageInput.value
   };
 
+  // Hide any existing messages
+  errorMessage.style.display = 'none';
+  loadingMessage.style.display = 'none';
+  sentMessage.style.display = 'none';
+
   // Continue with sending the email using EmailJS as shown in the previous code
   emailjs.send(serviceID, templateID, inputFields)
     .then(() => {
@@ -49,18 +54,17 @@ contactForm.addEventListener("submit", function (e) {
       subjectInput.value = ''; // Clear subject input value
       messageInput.value = '';
 
-      // You can also hide or remove any other elements as needed
-      errorMessage.style.display = 'none';
-      loadingMessage.style.display = 'none';
+      // Show the success message
       sentMessage.style.display = 'block';
     })
     .catch((error) => {
       // Handle any errors that occur during email sending
       console.error('Email sending failed:', error);
 
-      // You can also show an error message or take other actions here
+      // Change button text to indicate failure
+      submitBtn.innerText = "Send Message";
+
+      // Show the error message
       errorMessage.style.display = 'block';
-      loadingMessage.style.display = 'none';
-      sentMessage.style.display = 'none';
     });
 });
