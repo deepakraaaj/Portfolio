@@ -401,15 +401,16 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #728394;
+/* Add space between rows */
+.about .content .row {
+  margin-bottom: 20px; /* Adjust the value as needed */
 }
 
+/* Add space between columns */
 .about .content ul {
   list-style: none;
   padding: 0;
+  margin-left: 20px; /* Adjust the value as needed */
 }
 
 .about .content ul li {
@@ -432,6 +433,29 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+
+/* Style for the download button */
+.download-button {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.download-button .btn {
+  background-color: #0563bb;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button .btn:hover {
+  background-color:green;
+}
+/* Adjust the column containing the image */
+.col-lg-4 {
+  height: 400px;
+}
+
 
 /*--------------------------------------------------------------
 # Facts
@@ -514,7 +538,7 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume .resume-title {
+ .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -572,6 +596,26 @@ section {
   border: 2px solid #0563bb;
 }
 
+/* CSS */
+/* Add a media query for small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .col-lg-4 {
+    /* Adjust the width for the profile image on small screens */
+    width: 100%;
+    text-align: center;
+  }
+
+  .col-lg-8 {
+    /* Adjust the width for the content on small screens */
+    width: 100%;
+    text-align: left;
+    padding-top: 20px;
+  }
+}
+
+/* Additional CSS for responsive design can be added here */
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -609,14 +653,6 @@ section {
 
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  background: rgba(69, 80, 91, 0.8);
 }
 
 .portfolio .portfolio-wrap::before {
